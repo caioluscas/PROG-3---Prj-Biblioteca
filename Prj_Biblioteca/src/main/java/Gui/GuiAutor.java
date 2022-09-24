@@ -1,4 +1,4 @@
-package GuiPrincipal;
+package Gui;
 
 import Biblioteca.Autor;
 import dao.DaoAutor;
@@ -31,6 +31,10 @@ public class GuiAutor {
         });
     }
 
+    public JPanel getJPanel() {  //serve para pegar essa tela sem mudar a visibilidade private de JPane
+        return JPanel;
+    }
+
     public static void main(String[] args) {
         GuiAutor guiAutor = new GuiAutor(); //criacao do objeto relativo a tela
         JFrame frame = new JFrame("N1"); //criei um objeto com o titulo desejado
@@ -47,6 +51,7 @@ public class GuiAutor {
         frame.pack();  //serve para formatar a tela
 
         frame.setVisible(true);
+
 
 
     }

@@ -25,11 +25,14 @@ public class DaoAutor extends Persistencia<Autor> implements Dao<Autor> {
 
     public List<Autor> getAll() throws Exception{
         try {
-            FileInputStream in = new FileInputStream(NOMEARQUIVO);
-            String json = new String(in.readAllBytes());
+            FileInputStream in = new FileInputStream(NOMEARQUIVO); //abre um arquivo
+            String json = new String(in.readAllBytes());    //pega o JSON dentro do arquivo
+
+            //transforma em um lista de objeto
             List<Autor> autores = getObjectmapper().readValue(json, new TypeReference<List<Autor>>(){});
             return autores;
-        } catch (FileNotFoundException f) {
+        }
+        catch (FileNotFoundException f) {
             return new ArrayList();
         }
     }

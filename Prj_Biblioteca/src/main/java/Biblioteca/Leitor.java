@@ -6,10 +6,20 @@ public class Leitor {
     private String endereco;
     private String telefone;
     private Integer prazoMaximoDevolucao;
+    private static Long proximoCodigo = 1L;
+
+    public Leitor(String nome, String endereco, String telefone) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.codigo=proximoCodigo;
+        proximoCodigo++;
+    }
 
     public void Leitor(){
 
     }
+
 
     public Long getCodigo() {
         return codigo;
