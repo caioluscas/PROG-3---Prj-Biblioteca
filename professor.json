@@ -1,0 +1,8 @@
+[ {
+  "codigo" : 1,
+  "nome" : "Alan",
+  "endereco" : "Rua goiaba",
+  "telefone" : "2299923-6464",
+  "prazoMaximoDevolucao" : null,
+  "disciplina" : "Matemática"
+} ]

@@ -9,6 +9,11 @@ public class Aluno extends Leitor{
         setPrazoMaximoDevolucao(15);
     }
 
+    public Aluno(){
+
+    }
+
+
     public String getMatricula() {
         return matricula;
     }

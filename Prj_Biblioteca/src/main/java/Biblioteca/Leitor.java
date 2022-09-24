@@ -16,8 +16,13 @@ public class Leitor {
         proximoCodigo++;
     }
 
-    public void Leitor(){
+    public Leitor(){
 
+    }
+
+    @Override
+    public String toString() {
+        return this.nome+" "+this.endereco+" "+this.telefone;
     }
 
 

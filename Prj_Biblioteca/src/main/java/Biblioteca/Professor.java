@@ -8,6 +8,14 @@ public class Professor extends Leitor{
         this.disciplina = disciplina;
     }
 
+    public Professor(){
+
+    }
+    @Override
+    public String toString() {
+        return this.disciplina;
+    }
+
     public String getDisciplina() {
         return disciplina;
     }
