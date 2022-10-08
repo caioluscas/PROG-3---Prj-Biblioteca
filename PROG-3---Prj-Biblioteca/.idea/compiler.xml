@@ -14,9 +14,4 @@
       <module name="Prj_Biblioteca" target="18" />
     </bytecodeTargetLevel>
   </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Prj_Biblioteca" options="" />
-    </option>
-  </component>
 </project>

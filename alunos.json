@@ -1,0 +1,29 @@
+[ {
+  "codigo" : 1,
+  "nome" : "Roberto",
+  "endereco" : "Rua imigrante",
+  "telefone" : " 223893-8943",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "123123123"
+}, {
+  "codigo" : 1,
+  "nome" : "Caio Pinto",
+  "endereco" : "Rua dos Bandeirantes",
+  "telefone" : " 228760-9236",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "231234235"
+}, {
+  "codigo" : 1,
+  "nome" : "Joana",
+  "endereco" : "Rua dos Palhaços",
+  "telefone" : "2284384-4384",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "312312344"
+}, {
+  "codigo" : 1,
+  "nome" : "",
+  "endereco" : "",
+  "telefone" : "       -    ",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : ""
+} ]
