@@ -4,6 +4,8 @@ import Biblioteca.Aluno;
 import dao.DaoAluno;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.text.MaskFormatter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,10 +26,26 @@ public class GuiAluno {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    Aluno aluno = new Aluno(txtNome.getText(),txtEndereco.getText(),txtTelefone.getText(),txtMatricula.getText());
+                    Aluno aluno = new Aluno(txtNome.getText(),
+                            txtEndereco.getText(),
+                            txtTelefone.getText(),
+                            txtMatricula.getText());
                     new DaoAluno().save(aluno);
                 }catch (Exception ex){
                     JOptionPane.showMessageDialog(null, ex.getMessage());
+                }
+            }
+        });
+        lstAluno.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                Aluno aluno = (Aluno) lstAluno.getSelectedValue();
+
+                if(!(aluno==null)){
+                    txtNome.setText(aluno.getNome());
+                    txtEndereco.setText(aluno.getEndereco());
+                    txtTelefone.setText(aluno.getTelefone());
+                    txtMatricula.setText(aluno.getMatricula());
                 }
             }
         });

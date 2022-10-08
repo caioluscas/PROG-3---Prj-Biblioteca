@@ -2,6 +2,7 @@ package dao;
 
 import Biblioteca.Autor;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,6 +23,7 @@ public class DaoAutor extends Persistencia<Autor> implements Dao<Autor> {
         out.write(json.getBytes());
         out.close();
     }
+
 
     public List<Autor> getAll() throws Exception{
         try {

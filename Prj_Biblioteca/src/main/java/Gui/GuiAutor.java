@@ -1,9 +1,12 @@
 package Gui;
 
+import Biblioteca.Aluno;
 import Biblioteca.Autor;
 import dao.DaoAutor;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -27,6 +30,19 @@ public class GuiAutor {
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
 
+            }
+        });
+        lstAutores.addListSelectionListener(new ListSelectionListener() {
+            @Override                                                      //serve para mostrar a lista na caixa
+            public void valueChanged(ListSelectionEvent e) {
+                Autor autor = (Autor) lstAutores.getSelectedValue();
+
+                if(!(autor==null)){
+                    txtNome.setText(autor.getNome());
+                    txtNome.setText(autor.getNome());
+                    txtSobrenome.setText(autor.getSobreNome());
+                    txtNacionalidade.setText(autor.getNacionalidade());
+                }
             }
         });
     }

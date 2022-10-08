@@ -4,30 +4,49 @@ import Biblioteca.Livro;
 import dao.DaoLivro;
 
 import javax.swing.*;
-import javax.swing.text.MaskFormatter;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.ParseException;
+import java.util.List;
 
 public class GuiLivro {
     private JTextField txtTitulo;
 
     private JButton BtnSalvar;
     private JPanel jPanel;
+    private JList lstLivros;
+    private JTextField txtAutor;
+    private JTextField txtCodigo;
+    private JTextField txtAno;
 
     public GuiLivro() {
+
+
         BtnSalvar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Livro livro = new Livro(txtTitulo.getText());
+                    Livro livro = new Livro(txtAutor.getText()+" "+ txtTitulo.getText()+" "+txtCodigo.getText()+" "+txtAno.getText());
                     new DaoLivro().save(livro);
-
                 } catch (Exception ex) {
-                    throw new RuntimeException(ex);
+                    JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
             }
         });
+
+
+        lstLivros.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                Livro livro = (Livro) lstLivros.getSelectedValue();
+
+                if(!(livro==null)){
+                    txtTitulo.setText(livro.getTitulo());
+                }
+            }
+        });
+
     }
 
     public static void main(String[] args) {
@@ -42,6 +61,13 @@ public class GuiLivro {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }*/
+
+        try {
+            List<Livro> livros = new DaoLivro().getAll();
+            guiLivro.lstLivros.setListData(livros.toArray()); //serve para preencher a lista
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         frame.pack();                                         //configura a tela para o SO
         frame.setVisible(true);                               //exibe
