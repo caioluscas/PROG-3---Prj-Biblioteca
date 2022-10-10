@@ -5,18 +5,10 @@ import java.util.List;
 public class Livro {
     private Long codigo;
     private String titulo;
+    private String ano;
     private static Long proximoCodigo = 1L;
 
-    private Autor autor;
-
     private List<Autor> listaAutores = new ArrayList<>();
-
-
-    public Livro(String titulo) {
-        this.codigo = proximoCodigo;
-        this.titulo = titulo;
-        proximoCodigo++;
-    }
 
     @Override
     public String toString() {
@@ -24,6 +16,14 @@ public class Livro {
     }
 
     public Livro(){}
+
+    public Livro( String titulo, String ano, List<Autor> listaAutores) {
+        this.titulo = titulo;
+        this.ano = ano;
+        this.listaAutores = listaAutores;
+        this.codigo = proximoCodigo;
+        proximoCodigo++;
+    }
 
     public Long getCodigo() {
         return codigo;

@@ -4,31 +4,29 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-public class GuiPrincipal {
-
-    //private JPanel JPanel;
-    private JButton btnBibliotecario;
-    private JButton btnAtendente;
+public class GuiAtendente {
+    private JButton btnProfessor;
+    private JButton btnAluno;
     private javax.swing.JPanel JPanel;
-    public GuiPrincipal() {
-        btnBibliotecario.addActionListener(new ActionListener() {
+
+    public GuiAtendente() {
+        btnProfessor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GuiSenha guiSenha = new GuiSenha();
-                JFrame frame = new JFrame("Login");
-                frame.setContentPane(guiSenha.getJPanel()); //serve para abrir tela
+                GuiProfessor guiProfessor = new GuiProfessor();
+                JFrame frame = new JFrame("Cadastro de professor");
+                frame.setContentPane(guiProfessor.getJPanel());  //serve para configurar o botao para abrir outra tela
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //fechar caso abra outra tela
                 frame.pack();
                 frame.setVisible(true);
             }
         });
-        btnAtendente.addActionListener(new ActionListener() {
+        btnAluno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GuiSenha guiSenha = new GuiSenha();
-                JFrame frame = new JFrame("Login");
-                frame.setContentPane(guiSenha.getJPanel()); //serve para abrir tela
+                GuiAluno guiAluno = new GuiAluno();
+                JFrame frame = new JFrame("Cadastro de aluno");
+                frame.setContentPane(guiAluno.getJPanel());  //serve para configurar o botao para abrir outra tela
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //fechar caso abra outra tela
                 frame.pack();
                 frame.setVisible(true);
@@ -41,13 +39,12 @@ public class GuiPrincipal {
     }
 
     public static void main(String[] args) {
-        GuiPrincipal guiPrincipal = new GuiPrincipal();
-        JFrame frame = new JFrame("Login");
-        frame.setContentPane(guiPrincipal.JPanel); //serve para abrir tela
+        GuiAtendente guiAtendente = new GuiAtendente();
+        JFrame frame = new JFrame("Atendente");
+        frame.setContentPane(guiAtendente.JPanel); //serve para abrir tela
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //fechar caso abra outra tela
         frame.pack();
         frame.setVisible(true);
 
     }
-
 }
