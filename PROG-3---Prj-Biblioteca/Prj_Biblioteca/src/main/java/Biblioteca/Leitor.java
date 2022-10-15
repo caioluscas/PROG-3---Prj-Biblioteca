@@ -22,7 +22,7 @@ public class Leitor {
 
     @Override
     public String toString() {
-        return this.nome+" "+this.endereco+" "+this.telefone;
+        return this.nome;
     }
 
 

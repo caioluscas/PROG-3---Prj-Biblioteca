@@ -1,4 +1,6 @@
 package Biblioteca;
+import dao.DaoAutor;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +12,7 @@ public class Livro {
 
     private List<Autor> listaAutores = new ArrayList<>();
 
-    @Override
-    public String toString() {
-        return this.titulo;
-    }
+
 
     public Livro(){}
 
@@ -47,5 +46,18 @@ public class Livro {
 
     public static void setProximoCodigo(Long proximoCodigo) {
         Livro.proximoCodigo = proximoCodigo;
+    }
+
+    public List<Autor> getListaAutores() {
+        return listaAutores;
+    }
+
+    public void setListaAutores(List<Autor> listaAutores) {
+        this.listaAutores = listaAutores;
+    }
+
+    @Override
+    public String toString() {
+        return this.titulo;
     }
 }

@@ -1,13 +1,33 @@
 [ {
   "codigo" : 1,
-  "titulo" : "Roberto Marinho Cavalo 123123 1999"
+  "titulo" : "Timão e Pumba",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 2,
+  "titulo" : "Game Of Thrones",
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
-  "titulo" : "Roberto Penis Longo 6237123 1988"
+  "titulo" : "Perci e Jaquison",
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
-  "titulo" : "vfsfsdfs fwdfs 1239"
+  "titulo" : "Guanabara",
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
-  "titulo" : "fsadfsd dfvsdfd 2323"
+  "titulo" : "Empire State",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "Homem aranha",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 2,
+  "titulo" : "Mulher Maravilha",
+  "listaAutores" : [ {
+    "nome" : "Caio",
+    "sobreNome" : "Pinto",
+    "nacionalidade" : "Chile"
+  } ]
 } ]

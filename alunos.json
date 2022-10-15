@@ -1,0 +1,15 @@
+[ {
+  "codigo" : 1,
+  "nome" : "Natachia",
+  "endereco" : "Macaé",
+  "telefone" : "2227628-9222",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "692496"
+}, {
+  "codigo" : 1,
+  "nome" : "João",
+  "endereco" : "Rio das ostras",
+  "telefone" : "2242631364",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "3242423423"
+} ]

@@ -1,0 +1,38 @@
+[ {
+  "codigo" : 1,
+  "nome" : "Lucas",
+  "endereco" : "Macabu",
+  "telefone" : "2227789-4873",
+  "prazoMaximoDevolucao" : 30
+}, {
+  "codigo" : 1,
+  "nome" : "Natachia",
+  "endereco" : "Macaé",
+  "telefone" : "2227628-9222",
+  "prazoMaximoDevolucao" : 15
+}, {
+  "codigo" : 1,
+  "nome" : "Getulio",
+  "endereco" : "Cuiaba",
+  "telefone" : "2249394-8289",
+  "prazoMaximoDevolucao" : 30
+}, {
+  "codigo" : 1,
+  "nome" : "Wallace",
+  "endereco" : "Costazul",
+  "telefone" : " 221328-3203",
+  "prazoMaximoDevolucao" : 30
+}, {
+  "codigo" : 1,
+  "nome" : "Winderson Nunes",
+  "endereco" : "Pindamonhagamesa",
+  "telefone" : " 223938-2932",
+  "prazoMaximoDevolucao" : 30
+}, {
+  "codigo" : 1,
+  "nome" : "João",
+  "endereco" : "Rio das ostras",
+  "telefone" : "2242631364",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "3242423423"
+} ]

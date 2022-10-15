@@ -1,0 +1,21 @@
+[ {
+  "livro" : {
+    "codigo" : 2,
+    "titulo" : "Game Of Thrones",
+    "listaAutores" : [ ]
+  },
+  "dataAquisicao" : [ 2022, 10, 15 ],
+  "codigo" : 1
+}, {
+  "livro" : {
+    "codigo" : 2,
+    "titulo" : "Mulher Maravilha",
+    "listaAutores" : [ {
+      "nome" : "Caio",
+      "sobreNome" : "Pinto",
+      "nacionalidade" : "Chile"
+    } ]
+  },
+  "dataAquisicao" : [ 2022, 10, 15 ],
+  "codigo" : 1
+} ]
