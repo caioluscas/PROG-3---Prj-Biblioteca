@@ -12,4 +12,25 @@
   "telefone" : "2242631364",
   "prazoMaximoDevolucao" : 15,
   "matricula" : "3242423423"
+}, {
+  "codigo" : 1,
+  "nome" : "Gabrielle",
+  "endereco" : "Macaé",
+  "telefone" : " 223455-6788",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "32873723"
+}, {
+  "codigo" : 2,
+  "nome" : "Roberta",
+  "endereco" : "Manaus",
+  "telefone" : " 223355-6720",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "200123943"
+}, {
+  "codigo" : 1,
+  "nome" : "Caio",
+  "endereco" : "Friburgo",
+  "telefone" : "8899456-7989",
+  "prazoMaximoDevolucao" : 15,
+  "matricula" : "2342345"
 } ]

@@ -1,6 +1,8 @@
 package Gui.Cadastro;
 
+import Biblioteca.Aluno;
 import Biblioteca.Autor;
+import dao.DaoAluno;
 import dao.DaoAutor;
 
 import javax.swing.*;
@@ -19,12 +21,16 @@ public class GuiAutor {
     private JList lstAutores;
 
     public GuiAutor() {
+        updateList();
+        updateAutor();
         salvarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
                     Autor autor = new Autor(txtNome.getText(), txtSobrenome.getText(), txtNacionalidade.getText());
                     new DaoAutor().save(autor);
+                    updateList();
+                    updateAutor();
                 }catch (Exception ex){
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
@@ -44,6 +50,24 @@ public class GuiAutor {
                 }
             }
         });
+    }
+
+    private void updateList() {
+        try {
+            List<Autor> autores = new DaoAutor().getAll();
+            lstAutores.setListData(autores.toArray());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void updateAutor() {
+        try {
+            List<Autor> autores = new DaoAutor().getAll();
+            lstAutores.setListData(autores.toArray());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public JPanel getJPanel() {  //serve para pegar essa tela sem mudar a visibilidade private de JPane

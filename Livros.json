@@ -30,4 +30,12 @@
     "sobreNome" : "Pinto",
     "nacionalidade" : "Chile"
   } ]
+}, {
+  "codigo" : 1,
+  "titulo" : "Como matar meu chefe",
+  "listaAutores" : [ {
+    "nome" : "Gabriel",
+    "sobreNome" : "Londrino",
+    "nacionalidade" : "Asiatico"
+  } ]
 } ]

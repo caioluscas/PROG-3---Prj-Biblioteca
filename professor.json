@@ -33,4 +33,25 @@
   "telefone" : " 223938-2932",
   "prazoMaximoDevolucao" : 30,
   "disciplina" : "Banco de Dados"
+}, {
+  "codigo" : 1,
+  "nome" : "Lahir",
+  "endereco" : "Georgia",
+  "telefone" : "2132434-6664",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Organização de Computadores"
+}, {
+  "codigo" : 1,
+  "nome" : "Alaiza",
+  "endereco" : "Pernambuco",
+  "telefone" : "2345123-4789",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Administração"
+}, {
+  "codigo" : 2,
+  "nome" : "Inaldo",
+  "endereco" : "Freitas",
+  "telefone" : "3299004-3331",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Robotica"
 } ]
