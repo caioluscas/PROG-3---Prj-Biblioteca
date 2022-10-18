@@ -17,9 +17,9 @@ public class Emprestimo {
         this.dataEmprestimo = LocalDate.now();
         this.dataPrevistaDevolucao = LocalDate.now().plusDays(leitor.getPrazoMaximoDevolucao()); //plusDay add os dias ao dia da classe
         //pulsdays pega o dia de hj e soma com o prazo
-        //this.dataDevolucao = dataDevolucao;
 
     }
+
 
     public Leitor getLeitor() {
         return leitor;
@@ -59,5 +59,10 @@ public class Emprestimo {
 
     public void setDataDevolucao(LocalDate dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
+    }
+
+    @Override //A data de devolução é do tipo LocalDate, usamos o ToString para transformar em String
+    public String toString() {
+        return this.inclusaodeexemplar.toString() + " ";
     }
 }

@@ -18,4 +18,56 @@
   },
   "dataAquisicao" : [ 2022, 10, 15 ],
   "codigo" : 1
+}, {
+  "livro" : {
+    "codigo" : 2,
+    "titulo" : "Game Of Thrones",
+    "listaAutores" : [ ]
+  },
+  "dataAquisicao" : [ 2022, 10, 17 ],
+  "codigo" : 1
+}, {
+  "livro" : {
+    "codigo" : 1,
+    "titulo" : "Empire State",
+    "listaAutores" : [ ]
+  },
+  "dataAquisicao" : [ 2022, 10, 17 ],
+  "codigo" : 2
+}, {
+  "livro" : {
+    "codigo" : 1,
+    "titulo" : "Como matar meu chefe",
+    "listaAutores" : [ {
+      "nome" : "Gabriel",
+      "sobreNome" : "Londrino",
+      "nacionalidade" : "Asiatico"
+    } ]
+  },
+  "dataAquisicao" : [ 2022, 10, 17 ],
+  "codigo" : 3
+}, {
+  "livro" : {
+    "codigo" : 3,
+    "titulo" : "Copa do Mundo",
+    "listaAutores" : [ {
+      "nome" : "Hermenegildo",
+      "sobreNome" : "Soares",
+      "nacionalidade" : "Cuiaba"
+    } ]
+  },
+  "dataAquisicao" : [ 2022, 10, 17 ],
+  "codigo" : 4
+}, {
+  "livro" : {
+    "codigo" : 3,
+    "titulo" : "Copa do Mundo",
+    "listaAutores" : [ {
+      "nome" : "Hermenegildo",
+      "sobreNome" : "Soares",
+      "nacionalidade" : "Cuiaba"
+    } ]
+  },
+  "dataAquisicao" : [ 2022, 10, 17 ],
+  "codigo" : 1
 } ]

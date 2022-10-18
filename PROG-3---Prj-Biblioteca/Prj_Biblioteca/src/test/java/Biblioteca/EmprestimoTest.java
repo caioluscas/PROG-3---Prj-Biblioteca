@@ -9,7 +9,9 @@ import java.util.List;
 public class EmprestimoTest {
     @Test
     void Emprestimo(){
-        Autor autor = new Autor("Nome","Sobrenome","Nacionalidade");
+        Autor autor = new Autor();
+        Leitor leitor = new Leitor("Nome", "Endereço","Telefone" );
+
 
     }
 }

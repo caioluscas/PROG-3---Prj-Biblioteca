@@ -1,5 +1,6 @@
 package Biblioteca;
 import dao.DaoAutor;
+import dao.DaoLivro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +23,23 @@ public class Livro {
         this.listaAutores = listaAutores;
         this.codigo = proximoCodigo;
         proximoCodigo++;
+        AtualizarProximoCodigo();
     }
 
+    public void AtualizarProximoCodigo(){
+        Long maior = 0L;
+        try {
+            List<Livro> livros = new DaoLivro().getAll();
+            for (Livro livro : livros) {
+                if (livro.getCodigo() > maior) {
+                    maior = livro.getCodigo();
+                    setCodigo(maior+1);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     public Long getCodigo() {
         return codigo;
     }

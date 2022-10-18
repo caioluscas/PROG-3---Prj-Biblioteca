@@ -3,6 +3,7 @@ package Gui.Usuarios;
 import Gui.Cadastro.GuiAluno;
 import Gui.Cadastro.GuiEmprestimo;
 import Gui.Cadastro.GuiProfessor;
+//import Gui.GuiDevolucao;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -48,6 +49,17 @@ public class GuiAtendente {
                 frame.setVisible(true);
             }
         });
+//        devoluçãoDeLivroButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                GuiDevolucao guiDevolucao = new GuiDevolucao();
+//                JFrame frame = new JFrame("Devolução");
+//                frame.setContentPane(guiDevolucao.getJPanel());  //serve para configurar o botao para abrir outra tela
+//                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //fechar caso abra outra tela
+//                frame.pack();
+//                frame.setVisible(true);
+//            }
+//        });
     }
 
     public JPanel getJPanel() {  //serve para pegar essa tela sem mudar a visibilidade private de JPane

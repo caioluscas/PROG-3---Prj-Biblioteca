@@ -32,6 +32,7 @@ public class GuiAluno {
                             txtTelefone.getText(),
                             txtMatricula.getText());
                     new DaoAluno().save(aluno);
+                    updateList();
                 }catch (Exception ex){
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }

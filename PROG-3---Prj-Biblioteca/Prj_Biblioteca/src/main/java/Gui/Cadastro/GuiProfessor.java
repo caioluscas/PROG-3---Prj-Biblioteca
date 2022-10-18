@@ -1,6 +1,8 @@
 package Gui.Cadastro;
 
+import Biblioteca.Aluno;
 import Biblioteca.Professor;
+import dao.DaoAluno;
 import dao.DaoProfessor;
 
 import javax.swing.*;
@@ -20,6 +22,7 @@ public class GuiProfessor {
     private JList lstProfessor;
 
     public GuiProfessor() {
+        updateList();
         btnGravar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -27,6 +30,7 @@ public class GuiProfessor {
                         Professor professor = new Professor(txtNome.getText(),txtEndereco.getText(),
                                 txtTelefone.getText(),txtDisciplina.getText());
                         new DaoProfessor().save(professor);
+                        updateList();
 
                     }catch (Exception ex){
                         JOptionPane.showMessageDialog(null, ex.getMessage());
@@ -34,6 +38,15 @@ public class GuiProfessor {
 
             }
         });
+    }
+
+    private void updateList() {
+        try {
+            List<Professor> professores = new DaoProfessor().getAll();
+            lstProfessor.setListData(professores.toArray());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public JPanel getJPanel() {  //serve para pegar essa tela sem mudar a visibilidade private de JPane

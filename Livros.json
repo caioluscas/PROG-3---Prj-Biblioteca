@@ -38,4 +38,12 @@
     "sobreNome" : "Londrino",
     "nacionalidade" : "Asiatico"
   } ]
+}, {
+  "codigo" : 3,
+  "titulo" : "Copa do Mundo",
+  "listaAutores" : [ {
+    "nome" : "Hermenegildo",
+    "sobreNome" : "Soares",
+    "nacionalidade" : "Cuiaba"
+  } ]
 } ]

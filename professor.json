@@ -54,4 +54,18 @@
   "telefone" : "3299004-3331",
   "prazoMaximoDevolucao" : 30,
   "disciplina" : "Robotica"
+}, {
+  "codigo" : 3,
+  "nome" : "Graciane",
+  "endereco" : "Macaco amarelo",
+  "telefone" : "2293899-0093",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "PS2"
+}, {
+  "codigo" : 4,
+  "nome" : "Regisvaldo",
+  "endereco" : "Tubarino",
+  "telefone" : "4467384-1201",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Geografia"
 } ]

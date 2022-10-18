@@ -1,5 +1,9 @@
 package Biblioteca;
 
+import dao.DaoProfessor;
+
+import java.util.List;
+
 public class Leitor {
     private Long codigo;
     private String nome;
@@ -14,11 +18,14 @@ public class Leitor {
         this.telefone = telefone;
         this.codigo=proximoCodigo;
         proximoCodigo++;
+
     }
 
     public Leitor(){
 
     }
+
+
 
     @Override
     public String toString() {

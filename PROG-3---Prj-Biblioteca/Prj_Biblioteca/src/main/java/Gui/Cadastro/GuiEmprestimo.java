@@ -6,6 +6,7 @@ import dao.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +16,12 @@ public class GuiEmprestimo {
     private JList lstLeitor;
     private JButton btnEmprestimo;
     private javax.swing.JPanel JPanel;
+    private JButton btnDevolucao;
+    private JList lstDevolucao;
     private JButton btnLivro;
 
     public GuiEmprestimo() {
+        updateList();
         updateLeitor();
         updateExemplar();
         btnEmprestimo.addActionListener(new ActionListener() {
@@ -27,9 +31,19 @@ public class GuiEmprestimo {
                     Emprestimo emprestimo = new Emprestimo((inclusaoDeExemplar) lstLivroExemplar.getSelectedValue(),
                             (Leitor) lstLeitor.getSelectedValue());
                     new DaoEmprestimo().save(emprestimo);
+                    updateList();
                 }catch (Exception ex){
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
+
+            }
+        });
+        btnDevolucao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Emprestimo emprestimo = (Emprestimo) lstDevolucao.getSelectedValue(); //Cast faz a conversão para o tipo de dado
+                emprestimo.setDataDevolucao(LocalDate.now());
+
 
             }
         });
@@ -58,6 +72,14 @@ public class GuiEmprestimo {
         }
     }
 
+    private void updateList() {
+        try {
+            List<Emprestimo> emprestimos = new DaoEmprestimo().getAll();
+            lstDevolucao.setListData(emprestimos.toArray());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     public JPanel getJPanel() {  //serve para pegar essa tela sem mudar a visibilidade private de JPane
         return JPanel;
     }

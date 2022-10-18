@@ -1,12 +1,16 @@
 package Biblioteca;
 
+import dao.DaoinclusaoDeExemplar;
+
 import java.time.LocalDate;
+import java.util.List;
 
 public class Exemplar {
     private static Long proximoCodigo = 1L;
     private Livro livro;
     private Long codigo;
     private LocalDate dataAquisicao;
+    private LocalDate dataDevolucao = null;
 
     public Exemplar(){}
 
@@ -15,8 +19,23 @@ public class Exemplar {
         this.dataAquisicao = LocalDate.now();
         this.codigo = proximoCodigo;
         proximoCodigo++;
+        AtualizarProximoCodigo();
     }
 
+    public void AtualizarProximoCodigo(){
+        Long maior = 0L;
+        try {
+            List<inclusaoDeExemplar> exemplares = new DaoinclusaoDeExemplar().getAll();
+            for (inclusaoDeExemplar exemplar : exemplares) {
+                if (exemplar.getCodigo() > maior) {
+                    maior = exemplar.getCodigo();
+                    setCodigo(maior+1);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     public static Long getProximoCodigo() {
         return proximoCodigo;
     }
@@ -49,6 +68,8 @@ public class Exemplar {
         this.dataAquisicao = dataAquisicao;
     }
 
-
+    public void Devolucao(){
+        this.dataDevolucao = LocalDate.now(); //pego hj e armazeno a data
+    }
 
 }

@@ -73,21 +73,6 @@ public class GuiLivro {
         JFrame frame = new JFrame("Cadastro de livro"); //inicializa
         frame.setContentPane(guiLivro.getJPanel());              //adicionei o desenho ao JFrame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //fiz o X funcionar
-
-        /*try {
-            //MaskFormatter mascara = new MaskFormatter("# ######## #"); //criando a masacara
-            mascara.install(guiLivro.txtCodigo); //instalo ela no componente
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }*/
-
-        /*try {
-            List<Livro> livros = new DaoLivro().getAll();
-            guiLivro.lstLivros.setListData(livros.toArray()); //serve para preencher a lista
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }*/
-
         frame.pack();                                         //configura a tela para o SO
         frame.setVisible(true);                               //exibe
 
