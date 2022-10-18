@@ -41,10 +41,13 @@ public class GuiEmprestimo {
         btnDevolucao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Emprestimo emprestimo = (Emprestimo) lstDevolucao.getSelectedValue(); //Cast faz a conversão para o tipo de dado
-                emprestimo.setDataDevolucao(LocalDate.now());
-
-
+                try {
+                    Emprestimo emprestimo = (Emprestimo) lstDevolucao.getSelectedValue(); //Cast faz a conversão para o tipo de dado
+                    emprestimo.setDataDevolucao(LocalDate.now());
+                    new DaoEmprestimo().save(emprestimo);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, ex.getMessage());
+                }
             }
         });
     }

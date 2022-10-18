@@ -30,7 +30,7 @@ public class Leitor {
     @Override
     public String toString() {
         return this.nome;
-    }
+    }  //Representção String de um Objeto
 
 
     public Long getCodigo() {
