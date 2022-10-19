@@ -44,7 +44,6 @@ public class GuiAutor {
 
                 if(!(autor==null)){
                     txtNome.setText(autor.getNome());
-                    txtNome.setText(autor.getNome());
                     txtSobrenome.setText(autor.getSobreNome());
                     txtNacionalidade.setText(autor.getNacionalidade());
                 }

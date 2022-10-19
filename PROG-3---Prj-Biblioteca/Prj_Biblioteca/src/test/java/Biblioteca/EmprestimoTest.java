@@ -9,8 +9,13 @@ import java.util.List;
 public class EmprestimoTest {
     @Test
     void Emprestimo(){
-        Autor autor = new Autor();
+        Autor autor = new Autor("Nome","Sobrenome","Nacionalidade");
         Leitor leitor = new Leitor("Nome", "Endereço","Telefone" );
+        List<Autor> listaAutores = new ArrayList<>(); //crio uma lista de Autores ja q o proprio nao é uma String
+        listaAutores.add(autor);
+        //Livro livro = new Livro("Tilulo", "Ano",);
+        inclusaoDeExemplar inclusaodeexemplar = new inclusaoDeExemplar();
+
 
 
     }

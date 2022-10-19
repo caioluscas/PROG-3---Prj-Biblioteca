@@ -130,4 +130,69 @@
   "dataEmprestimo" : [ 2022, 10, 15 ],
   "dataPrevistaDevolucao" : [ 2022, 11, 14 ],
   "dataDevolucao" : [ 2022, 10, 17 ]
+}, {
+  "leitor" : {
+    "codigo" : 1,
+    "nome" : "Lucas",
+    "endereco" : "Macabu",
+    "telefone" : "2227789-4873",
+    "prazoMaximoDevolucao" : 30
+  },
+  "inclusaodeexemplar" : {
+    "livro" : {
+      "codigo" : 2,
+      "titulo" : "Game Of Thrones",
+      "listaAutores" : [ ]
+    },
+    "dataAquisicao" : [ 2022, 10, 15 ],
+    "codigo" : 1
+  },
+  "dataEmprestimo" : [ 2022, 10, 15 ],
+  "dataPrevistaDevolucao" : [ 2022, 11, 14 ],
+  "dataDevolucao" : [ 2022, 10, 18 ]
+}, {
+  "leitor" : {
+    "codigo" : 1,
+    "nome" : "Getulio",
+    "endereco" : "Cuiaba",
+    "telefone" : "2249394-8289",
+    "prazoMaximoDevolucao" : 30
+  },
+  "inclusaodeexemplar" : {
+    "livro" : {
+      "codigo" : 2,
+      "titulo" : "Mulher Maravilha",
+      "listaAutores" : [ {
+        "nome" : "Caio",
+        "sobreNome" : "Pinto",
+        "nacionalidade" : "Chile"
+      } ]
+    },
+    "dataAquisicao" : [ 2022, 10, 15 ],
+    "codigo" : 1
+  },
+  "dataEmprestimo" : [ 2022, 10, 15 ],
+  "dataPrevistaDevolucao" : [ 2022, 11, 14 ],
+  "dataDevolucao" : [ 2022, 10, 18 ]
+}, {
+  "leitor" : {
+    "codigo" : 1,
+    "nome" : "Gabrielle",
+    "endereco" : "Macaé",
+    "telefone" : " 223455-6788",
+    "prazoMaximoDevolucao" : 15,
+    "matricula" : "32873723"
+  },
+  "inclusaodeexemplar" : {
+    "livro" : {
+      "codigo" : 1,
+      "titulo" : "Empire State",
+      "listaAutores" : [ ]
+    },
+    "dataAquisicao" : [ 2022, 10, 17 ],
+    "codigo" : 2
+  },
+  "dataEmprestimo" : [ 2022, 10, 18 ],
+  "dataPrevistaDevolucao" : [ 2022, 11, 2 ],
+  "dataDevolucao" : null
 } ]
